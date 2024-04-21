@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
+import PropTypes from 'prop-types'
 
 export const CartItem = (props) => {
     const { id, productName, price, productImage } = props.data;
@@ -19,4 +20,8 @@ export const CartItem = (props) => {
             </div>
         </div>
     )
+}
+
+CartItem.propTypes = {
+    data: PropTypes.string,
 }
